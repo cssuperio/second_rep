@@ -1,0 +1,69 @@
+FOR KC's INSTRUCTION PURPOSES ONLY!!! NO OTHER EYES!!!
+
+
+HAHAHAHAHAHAHAH MAY GIN EDIT AKO GIYA! BLEH! Check ko lang sa GitHub kung nag change kada commit ko! Ty.
+
+To Use, just run 3D Wave.py.  Unlike its 2D predecessor, One may have as many waves as one wants.  Of course, more waves makes the program run more slowly.  If you want to change the wave open Waves.txt.  
+You will see:
+
+40
+5
+1,1,0, 0,0
+
+-The number on the first row represents the resolution of the grid.
+-The number on the second row represents the frequency of the basic wave generator.  This is just a default setting; the same effect can be achieved with number two.  
+-The first number represents the amplitude.
+-The second number represents the frequency - larger number = higher frequency.
+-The third number represents the shift of the wave in degrees.
+-The fourth number represents the X coordinate of the generator.
+-The fifth number represents the Z coordinate of the generator.
+
+when executed, these numbers will translate into the wave:
+y = 1sin(1D + Ø)
+where D is the distance from the generator, which is located at (0,0).  The grid size is 40x40.
+Another example:
+
+50
+5
+5,1,0, 10,15
+5,7,-90, 15,15
+
+This will make a grid 50 squares on a side, with two wave generators at (10,15) and (15,15).  The first will be of the equation:
+y = 5sin(1D + 0)
+...and the second will be of the equation:
+y = 5sin(7D - 90)
+
+You will enter the numbers exactly as seen here, with a single space between the third and fourth numbers.  Anything else will give an error.  The numbers can be any size, but the placement of the space and the commas between them is CRUCIAL.
+
+The controls:
+ESCAPE               - Exits
+UP                   - Moves view away
+DOWN                 - Moves view closer
+LEFT                 - Moves view left
+RIGHT                - Moves view left
+2 (On keypad or not) - Rotates view down
+8 (On keypad or not) - Rotates view up
+4 (On keypad or not) - Rotates view left
+6 (On keypad or not) - Rotates view right
+F1                   - Draws grid as lines, points, or surface
+F2                   - Draws no textures, textures, heightmap, color heightmap
+F3                   - Enables Lighting
+m                    - Changes between quad and triangle mode.
+
+Changes: 
+-Made keys toggle stuff instead of separate keys!
+-Made the number keys not on the keypad work!
+-added lighting by normal maps!
+-added texturing!
+ -added fake water texture!
+ -added single colour height-map mode!
+ -added rainbow colour height-map mode!
+-added triangle mode!
+-added default frequency factor!
+
+Notes:
+-0,0 is in the upper left corner of the grid.  
+-Long vertical lines are placed at the locations of the wave generators.
+-OpenGL will not do the height-maps with lighting.
+-The default settings are: Line Mode, Quad Mode, No Texturing No Lighting.
+
